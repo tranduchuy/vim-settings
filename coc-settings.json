@@ -1,0 +1,15 @@
+{
+    "languageserver": {
+        // asd
+    },
+    "eslint.format.enable": true,
+    "eslint.autoFixOnSave": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "json"
+    ],
+    //"solargraph.useBundler": false,
+}
