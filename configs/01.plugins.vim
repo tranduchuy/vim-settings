@@ -1,6 +1,7 @@
 set nocompatible
 call plug#begin()
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'doums/darcula'
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'christoomey/vim-tmux-navigator'

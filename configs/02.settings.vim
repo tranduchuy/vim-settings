@@ -1,5 +1,5 @@
 let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme darcula
 nnoremap <SPACE> <Nop>
 let mapleader =" "
 

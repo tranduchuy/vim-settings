@@ -24,7 +24,21 @@ set shortmess+=c
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport') " auto import missing package
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-eslint']
-
+hi! link CocErrorSign ErrorSign
+hi! link CocWarningSign WarningSign
+hi! link CocInfoSign InfoSign
+hi! link CocHintSign HintSign
+hi! link CocErrorFloat Pmenu
+hi! link CocWarningFloat Pmenu
+hi! link CocInfoFloat Pmenu
+hi! link CocHintFloat Pmenu
+hi! link CocHighlightText IdentifierUnderCaret
+hi! link CocHighlightRead IdentifierUnderCaret
+hi! link CocHighlightWrite IdentifierUnderCaretWrite
+hi! link CocErrorHighlight CodeError
+hi! link CocWarningHighlight CodeWarning
+hi! link CocInfoHighlight CodeInfo
+hi! link CocHintHighlight CodeHint
 
 " easy motions
 map <Leader><Leader> <Plug>(easymotion-prefix)
