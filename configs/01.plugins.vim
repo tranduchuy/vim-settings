@@ -16,7 +16,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ap/vim-buftabline'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
-Plug 'pangloss/vim-javascript'    " JavaScript support
+"Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdcommenter'
 call plug#end()
