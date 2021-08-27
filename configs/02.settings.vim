@@ -41,3 +41,7 @@ set expandtab       " Expand TABs to spaces
 highlight Normal ctermbg=44475A
 filetype on
 filetype plugin indent on
+
+" close all buffers
+nnoremap <leader>bd :bufdo bd<CR>
+" close all buffers except the current
