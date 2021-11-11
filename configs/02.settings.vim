@@ -1,5 +1,5 @@
 let g:gruvbox_italic=1
-colorscheme darcula
+colorscheme dracula
 nnoremap <SPACE> <Nop>
 let mapleader =" "
 
@@ -15,6 +15,7 @@ set nowritebackup
 set clipboard=unnamedplus
 set number
 set termguicolors
+set relativenumber
 
 " Give more space for displaying messages.
 set cmdheight=2

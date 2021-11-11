@@ -1,7 +1,8 @@
 set nocompatible
 call plug#begin()
 "Plug 'morhetz/gruvbox'
-Plug 'doums/darcula'
+" Plug 'doums/darcula'
+Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -19,5 +20,8 @@ Plug 'ryanoasis/vim-devicons'
 "Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdcommenter'
+Plug 'hashivim/vim-terraform'
+Plug 'vim-syntastic/syntastic'
+Plug 'juliosueiras/vim-terraform-completion'
 call plug#end()
 
