@@ -4,6 +4,7 @@
     },
     "eslint.format.enable": true,
     "eslint.autoFixOnSave": true,
+    "diagnostic.checkCurrentLine": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "javascript",
         "javascriptreact",

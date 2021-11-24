@@ -6,18 +6,9 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
 
+" default highlight indent
+let g:indent_guides_enable_on_vim_startup = 1
 
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_show_hidden = 1
-nnoremap <leader>P :CtrlPBuffer<CR>
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
 " vim highlightedyank
 let g:highlightedyank_highlight_duration = 300
 
@@ -241,3 +232,23 @@ let g:terraform_completion_keys = 1
 " (Optional) Default: 1, enable(1)/disable(0) terraform module registry compltion
 let g:terraform_registry_module_completion = 0
 
+" vim smoothie
+let g:smoothie_enabled=0
+
+" ACK
+nnoremap <leader>a :Ack<Space>
+
+" fzf
+"" Map phím tắt Ctrl + P
+nnoremap <silent> <C-p> :Files<CR>
+
+"" Tìm file trong project, nhưng bỏ mấy thư mục như node_modules ra, để tìm nhẹ hơn.
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path '**/node_modules/**' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o -path '*build*/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
+
+
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
+" Map phím "\f" để tìm nội dung, tương tự như "Ctrl + Shift + F" trên VSCode nhé
+nnoremap <silent> <Leader>f :Rg<CR>
