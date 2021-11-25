@@ -19,6 +19,8 @@ set termguicolors
 set noshowmode
 " Give more space for displaying messages.
 set cmdheight=2
+set noswapfile
+set lazyredraw
 
 syntax on
 
@@ -55,3 +57,6 @@ inoremap <C-l> <Right>
 "cnoremap <C-j> <Down>
 "cnoremap <C-k> <Up>
 "cnoremap <C-l> <Right>
+"
+" no background
+hi Normal ctermbg=none guibg=none

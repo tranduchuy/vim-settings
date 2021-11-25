@@ -10,6 +10,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'kevinoid/vim-jsonc' " jsonc syntax
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'easymotion/vim-easymotion'
 Plug 'psliwka/vim-smoothie'
 Plug 'vim-airline/vim-airline'
@@ -22,5 +23,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'hashivim/vim-terraform'
 Plug 'vim-syntastic/syntastic'
 Plug 'juliosueiras/vim-terraform-completion'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 

@@ -6,11 +6,13 @@
     "eslint.autoFixOnSave": true,
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.formatOnSaveFiletypes": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "json"
+        "css",
+          "markdown",
+          "typescript",
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "json"
     ],
     //"solargraph.useBundler": false,
 }
