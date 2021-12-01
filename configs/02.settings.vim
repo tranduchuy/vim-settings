@@ -21,6 +21,7 @@ set noshowmode
 set cmdheight=2
 set noswapfile
 set lazyredraw
+set autowrite
 
 syntax on
 
