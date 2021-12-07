@@ -1,18 +1,17 @@
 {
-    "languageserver": {
-        // asd
-    },
-    "eslint.format.enable": true,
-    "eslint.autoFixOnSave": true,
-    "diagnostic.checkCurrentLine": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "css",
-          "markdown",
-          "typescript",
-          "javascript",
-          "javascriptreact",
-          "typescriptreact",
-          "json"
-    ],
-    //"solargraph.useBundler": false,
+  "languageserver": {},
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.autoFixOnSave": true,
+  "diagnostic.checkCurrentLine": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "typescript",
+    "javascript",
+    "javascriptreact",
+    "typescriptreact",
+    "json"
+  ]
+  //"solargraph.useBundler": false,
 }

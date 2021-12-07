@@ -1,13 +1,11 @@
-
 " NERDtree
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>N :NERDTreeFind<CR>
 let g:NERDTreePatternMatchHighlightFullName = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
-
-" default highlight indent
-let g:indent_guides_enable_on_vim_startup = 1
+let NERDTreeHighlightCursorline = 0
+let g:NERDTreeLimitedSyntax = 1
 
 " vim highlightedyank
 let g:highlightedyank_highlight_duration = 300
@@ -27,13 +25,12 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-eslint',
   \ 'coc-git',
-  \ 'coc-prettier',
   \ 'coc-flutter',
   \ 'coc-angular',
   \ 'coc-pyright',
   \ ]
-command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
-let g:prettier#autoformat = 0
+" command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+" let g:prettier#autoformat = 0
 
 hi! link CocErrorSign ErrorSign
 hi! link CocWarningSign WarningSign
@@ -181,6 +178,25 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+let g:airline_extensions = ["tabline"]
+"let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts = 1                                                                                                         
+let g:airline_section_b = '%{getcwd()}' " in section B of the status line display the CWD                                                 
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_close_button = 1
+let g:airline#extensions#tabline#close_symbol = 'X'
+let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+
 " Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
@@ -261,8 +277,8 @@ nnoremap <silent> <C-p> :Files<CR>
 "" Tìm file trong project, nhưng bỏ mấy thư mục như node_modules ra, để tìm nhẹ hơn.
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path '**/node_modules/**' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o -path '*build*/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
-
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden --ignore="*.git*"'
+"let $FZF_DEFAULT_COMMAND =  \"find * -path '*/\.*' -prune -o -path '**/node_modules/**' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o -path '*build*/**' -prune -o  -type f -print -o -type l -print 2> /dev/null\"
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
