@@ -48,6 +48,10 @@ hi! link CocWarningHighlight CodeWarning
 hi! link CocInfoHighlight CodeInfo
 hi! link CocHintHighlight CodeHint
 
+hi! CocErrorSign guifg=#d1666a
+" hi! CocInfoSign guibg=#353b45
+hi! CocWarningSign guifg=#d1cd66
+
 " easy motions
 map <Leader><Leader> <Plug>(easymotion-prefix)
 
@@ -291,6 +295,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
+let g:go_list_type = "quickfix"
 
 " Auto formatting and importing
 let g:go_fmt_autosave = 1
@@ -314,3 +319,9 @@ endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd Filetype go inoremap <buffer> . .<C-x><C-p>
+
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
