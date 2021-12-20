@@ -2,7 +2,7 @@
     "languageserver": {},
     "eslint.enable": true,
     "eslint.format.enable": true,
-    "eslint.autoFixOnSave": true,
+    "eslint.autoFixOnSave": false,
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "css",
