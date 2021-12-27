@@ -25,5 +25,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'Yggdroot/indentLine'
+Plug 'sbdchd/neoformat'
 call plug#end()
 
