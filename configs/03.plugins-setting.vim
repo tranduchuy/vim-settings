@@ -13,7 +13,6 @@ let g:highlightedyank_highlight_duration = 300
 " coc
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport') " auto import missing package
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 let g:coc_global_extensions = [
   \ 'coc-ultisnips',
@@ -316,38 +315,22 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 " Map phím "\f" để tìm nội dung, tương tự như "Ctrl + Shift + F" trên VSCode nhé
 nnoremap <silent> <Leader>f :Rg<CR>
 
-" Go syntax highlighting
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_operators = 1
-let g:go_list_type = "quickfix"
-
-" Auto formatting and importing
-let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
-
-" Status line types/signatures
-let g:go_auto_type_info = 1
-
-" Run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-" Map keys for most used commands.
-" Ex: `\b` for building, `\r` for running and `\b` for running test.
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
-autocmd FileType go nmap <leader>t  <Plug>(go-test)
-autocmd Filetype go inoremap <buffer> . .<C-x><C-p>
-
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+
+" Go settings
+let g:go_doc_popup_window = 1
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+
+au FileType go nmap <Leader>ae <Plug>(go-alternate-edit)
+au FileType go nmap <Leader>av <Plug>(go-alternate-vertical)
