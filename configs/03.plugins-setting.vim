@@ -106,7 +106,7 @@ nmap <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 " trigger eslint fix
-nmap <leader>ef :CocCommand eslint.executeAutofix<CR> 
+nmap <leader>EF <Plug>(coc-codeaction)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -335,3 +335,15 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 
 au FileType go nmap <Leader>ae <Plug>(go-alternate-edit)
 au FileType go nmap <Leader>av <Plug>(go-alternate-vertical)
+
+
+let g:localvimrc_whitelist='/Users/huytd/*'
+
+let g:user_emmet_install_global = 1
+autocmd FileType html,css,javascript.jsx EmmetInstall
+let g:user_emmet_settings = {
+\ 'typescript' : {
+\     'extends' : 'jsx',
+\ },
+\}
+inoremap <leader>, :<C-Y>,

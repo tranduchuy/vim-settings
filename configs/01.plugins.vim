@@ -26,5 +26,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'Yggdroot/indentLine'
 Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'embear/vim-localvimrc'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
