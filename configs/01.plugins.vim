@@ -17,16 +17,18 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
 Plug 'hashivim/vim-terraform'
 Plug 'vim-syntastic/syntastic'
-Plug 'juliosueiras/vim-terraform-completion'
+"Plug 'juliosueiras/vim-terraform-completion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-expand-region'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'Yggdroot/indentLine'
+"Plug 'elzr/vim-json' " to fixed concealed double quote in json caused by Yggdroot/indentLine
 Plug 'sbdchd/neoformat'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'embear/vim-localvimrc'
 Plug 'mattn/emmet-vim'
+Plug 'jparise/vim-graphql'
 call plug#end()
 

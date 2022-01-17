@@ -1,10 +1,14 @@
 {
-  "languageserver": {},
-  "eslint.enable": true,
-  "eslint.format.enable": true,
-  "eslint.autoFixOnSave": false,
-  "diagnostic.checkCurrentLine": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "json"],
-  "git.addGBlameToVirtualText": true,
-  "git.addGBlameToBufferVar": true
+    "languageserver": {},
+    "eslint.enable": true,
+    "eslint.format.enable": true,
+    "eslint.autoFixOnSave": false,
+    "diagnostic.checkCurrentLine": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "json"
+    ],
+    "git.addGBlameToVirtualText": true,
+    "git.addGBlameToBufferVar": true
 }
