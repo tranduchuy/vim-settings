@@ -1,5 +1,6 @@
 let g:gruvbox_italic=1
 colorscheme onedark
+"colorscheme darcula
 nnoremap <SPACE> <Nop>
 let mapleader =" "
 
@@ -20,6 +21,7 @@ set noshowmode
 " Give more space for displaying messages.
 set cmdheight=2
 set noswapfile
+set ttyfast
 set lazyredraw
 set autowrite
 set exrc
@@ -31,8 +33,9 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-set foldmethod=manual
-set nofoldenable
+set foldmethod=syntax
+set foldcolumn=0
+set foldlevelstart=99
 
 syntax on
 

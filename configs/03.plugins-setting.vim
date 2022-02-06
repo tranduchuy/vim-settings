@@ -6,13 +6,12 @@ let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
 let NERDTreeHighlightCursorline = 0
 let g:NERDTreeLimitedSyntax = 1
-
 " vim highlightedyank
 let g:highlightedyank_highlight_duration = 300
 
-"let g:vim_json_syntax_conceal = 0
-let g:indentLine_faster = 1
-let g:indentLine_setConceal = 0
+let g:vim_json_syntax_conceal = 0
+"let g:indentLine_faster = 1
+"let g:indentLine_setConceal = 0
 
 " coc
 " Don't pass messages to |ins-completion-menu|.
@@ -34,6 +33,7 @@ let g:coc_global_extensions = [
   \ ]
 " command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 " let g:prettier#autoformat = 0
+nmap <Leader>F :CocCommand eslint.executeAutofix<CR>
 
 hi! link CocErrorSign ErrorSign
 hi! link CocWarningSign WarningSign
