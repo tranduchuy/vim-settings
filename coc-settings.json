@@ -3,6 +3,9 @@
     "eslint.enable": true,
     "eslint.format.enable": true,
     "eslint.autoFixOnSave": false,
+    "eslint.debug": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.trace.server": true,
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "css",

@@ -36,3 +36,8 @@
 |     |            |                 |
 |     |            |                 |
 |     |            |                 |
+
+## Helper tools
+
+- markdown table generator: https://tableconvert.com/markdown-generator
+- tmux cheat sheet: https://tmuxcheatsheet.com/
